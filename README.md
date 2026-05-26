@@ -56,13 +56,13 @@ python3 tests/test_payment_flow.py --method visa --headed
 python3 tests/test_payment_flow.py --method mada --headed
 ```
 
-### 6. Debug a fresh PayTabs URL directly
+### 8. Debug a fresh PayTabs URL directly
 PayTabs codes change for every order and expire quickly. Normal checkout runs automatically capture the latest live URL from the redirect. Use direct mode only when you already have a fresh PayTabs URL:
 ```bash
 python3 tests/test_payment_flow.py --paytabs-only --paytabs-url "https://secure.paytabs.sa/payment/page/LATEST_CODE/start"
 ```
 
-### 7. Run via pytest
+### 9. Run via pytest
 ```bash
 cd tests
 pytest test_visa_payment.py -v
