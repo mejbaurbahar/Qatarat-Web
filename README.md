@@ -13,27 +13,44 @@ End-to-end automation tests for the Qatarat checkout → login → PayTabs payme
 
 ## Quick Start
 
-### 1. Install Python dependencies
+### 1. Clone the repository
+```bash
+# Via HTTPS
+git clone https://github.com/mejbaurbahar/Qatarat-Web.git
+cd Qatarat-Web
+
+# Or via SSH
+git clone git@github.com:mejbaurbahar/Qatarat-Web.git
+cd Qatarat-Web
+```
+
+### 2. Set up a virtual environment (Recommended)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Python dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Install Playwright browsers
+### 4. Install Playwright browsers
 ```bash
 playwright install chromium
 ```
 
-### 3. Run the full suite (headless)
+### 5. Run the full suite (headless)
 ```bash
 python3 tests/test_payment_flow.py
 ```
 
-### 4. Run with a visible browser window
+### 6. Run with a visible browser window
 ```bash
 python3 tests/test_payment_flow.py --headed
 ```
 
-### 5. Run only one payment method
+### 7. Run only one payment method
 ```bash
 python3 tests/test_payment_flow.py --method visa --headed
 python3 tests/test_payment_flow.py --method mada --headed
